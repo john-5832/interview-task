@@ -1,0 +1,14 @@
+useEffect(() => {
+    let ignore = false;
+
+    fetch(`/search?q=${query}`)
+        .then(res => res.json())
+        .then(data => {
+            if (!ignore){
+                setResults(data);
+            }
+        });
+        return()=>{
+            ignore =true
+        };
+}, [query]);
