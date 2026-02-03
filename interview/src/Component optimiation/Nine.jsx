@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import BigList from "./Biglist"
+import BigList from "../Biglist"
 
 function App() {
     const [count, setCount] = useState(0);
